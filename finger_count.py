@@ -26,7 +26,7 @@ tipIds = [4,8,12,16,20]
 while True:
     success, img = cap.read()
     img = detector.findHands(img)
-    lmList = detector.findPosition(img, draw=False)
+    lmList, bbox = detector.findPosition(img, draw=False)
 
     if len(lmList) != 0:
         fingers = []
